@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha383-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles/tentang.css">
+    <link rel="stylesheet" href="../styles/tentang-auth.css">
     <title>LibBooks</title>
 </head>
 
@@ -18,11 +18,11 @@
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="index.html">LibBooks</a></span>
+            <span class="logo navLogo"><a href="index-auth.html">LibBooks</a></span>
 
             <div class="menu">
                 <div class="logo-toogle">
-                    <span class="logo"><a href="index.html">LibBooks</a></span>
+                    <span class="logo"><a href="index-auth.html">LibBooks</a></span>
                     <i class='bx bx-x sidebarClose'></i>
                 </div>
                 <ul class="nav-link mt-0 mb-0">
@@ -32,10 +32,10 @@
                         Kategori
                       </a>
                       <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="index.html#book">Anime</a></li>
-                        <li><a class="dropdown-item" href="index.html#book2">Fantasi</a></li>
-                        <li><a class="dropdown-item" href="index.html#book3">Drama</a></li>
-                        <li><a class="dropdown-item" href="index.html#book4">Fiksi</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book">Anime</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book2">Fantasi</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book3">Drama</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book4">Fiksi</a></li>
                       </ul>
                     </li>
                     <li><a href="buku.html">Buku</a></li>
@@ -54,7 +54,19 @@
                     <i class='bx bx-search search'></i>
                 </div>
             </div>
-            <a href="login.html" class="btn btn-primary mr-1" style="border-radius: 25px;width: 100px;">Login</a>
+            <div class="action">
+              <div class="userProfile" onclick="menuToggle();">
+                <img src="../img/profile.png">
+              </div>
+              <div class="menuProfile ps-3 pe-3">
+                <h3>Sopater Siringo ringo<br><span>Front End WebDev</span></h3>
+                <ul>
+                  <li><img src="../img/profile1.png" class="profile1"><a href="profileuser.html">Profile</a></li>
+                  <li><img src="../img/add-book.png" class="profile1"><a href="tambahBuku.html">Tambah Buku</a></li>
+                  <li><img src="../img/logout.png" class="profile1"><a href="../index.html">Logout</a></li>
+                </ul>
+              </div>
+            </div>
             </div>
         </div>
     </nav>
@@ -159,22 +171,22 @@
                 <div class="col-12 col-lg-6 col-md-12 col-sm-12 text-center">
                   <a href="#">
                     <img
-                      src="img/github.svg"
+                      src="../img/github.svg"
                       alt="github" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/fb.svg"
+                      src="../img/fb.svg"
                       alt="facebook" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/google.svg"
+                      src="../img/google.svg"
                       alt="google" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/ig.svg"
+                      src="../img/ig.svg"
                       alt="instagram" class="img-fluid mr-4">
                   </a>
                 </div>
@@ -223,6 +235,11 @@
                    nav.classList.remove("active");
                };
             });
+
+            function menuToggle() {
+        const toggleMenu = document.querySelector('.menuProfile');
+        toggleMenu.classList.toggle('active');
+      }
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

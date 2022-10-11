@@ -170,67 +170,114 @@ nav .nav-bar .logo a {
   cursor: pointer;
 }
 @media (max-width: 790px) {
-    nav .nav-bar .sidebarOpen {
-      display: block;
-    }
-    .menu {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      left: -100%;
-      top: -1px;
-      padding: 25px;
-      background-color: #fff;
-      border: 1px solid #000000;
-      z-index: 100;
-      transition: all 0.4s ease;
-    }
-    nav.active .menu {
-      left: -0%;
-    }
-    nav.active .nav-bar .navLogo a {
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-    .menu .logo-toogle {
-      display: block;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo-toogle .sidebarClose {
-      color: var(--text-color);
-      font-size: 25px;
-      cursor: pointer;
-    }
-    .nav-bar .nav-link {
-      flex-direction: column;
-      width: 100%;
-    }
-    .nav-link li a {
-      display: block;
-      margin-top: 20px;
-    }
+  nav .nav-bar .sidebarOpen {
+    display: block;
   }
-
-#about {
-  margin-top: 8rem;
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: -1px;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    z-index: 100;
+    transition: all 0.4s ease;
+  }
+  nav.active .menu {
+    left: -0%;
+  }
+  nav.active .nav-bar .navLogo a {
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .menu .logo-toogle {
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-toogle .sidebarClose {
+    color: var(--text-color);
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .nav-bar .nav-link {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-link li a {
+    display: block;
+    margin-top: 20px;
+  }
 }
 
-.action {
-  position: fixed;
-  top: 15px;
-  right: 30px;
+.component-book {
+  margin-top: 20px;
+  padding: 1rem;
 }
-.action .profile {
+
+.component-book .book-thumbnail {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  z-index: 1;
+}
+
+.component-book .book-thumbnail .book-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in;
+  opacity: 0.5;
+}
+
+.component-book .book-thumbnail .book-image:hover {
+  transform: scale(1.1);
+}
+
+.component-book .book-thumbnail .book-image:focus {
+  transform: scale(1.1);
+}
+
+.component-book .book-text {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 12px;
+  color: #0c0d36;
+  text-align: center;
+}
+
+.component-book:link {
+  text-decoration: none;
+}
+.container-fluid#satu {
+  margin-top: 4.2rem;
+  padding-top: 4rem;
+  background-image: url(../img/wave3bawah.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#dua {
+  margin-top: 4rem;
+  background-image: url(../img/wave3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.action .userProfile {
+  position: relative;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
 }
-.action .profile img {
+.action .userProfile img {
   position: absolute;
   top: 0;
   left: 0;
@@ -238,12 +285,13 @@ nav .nav-bar .logo a {
   height: 100%;
   object-fit: cover;
 }
-.action .menu2 {
+
+.action .menuProfile {
   position: absolute;
-  top: 80px;
+  top: 120px;
   right: -10px;
   padding: 10px 20px;
-  background: #fff;
+  background: silver;
   width: 200px;
   box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -251,58 +299,72 @@ nav .nav-bar .logo a {
   visibility: hidden;
   opacity: 0;
 }
-.action .menu2.active {
+
+.action .menuProfile.active {
+  top: 80px;
   visibility: visible;
   opacity: 1;
 }
-.action .menu2::before {
+
+.action .menuProfile::before {
   content: "";
   position: absolute;
   top: -5px;
-  right: 20px;
+  right: 52px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: silver;
   transform: rotate(45deg);
 }
-.action .menu2 h3 {
+
+.action .menuProfile h3 {
   width: 100%;
   text-align: center;
   font-size: 18px;
-  padding: 20px 0;
+  padding: 7px 0;
   font-weight: 500;
   font-size: 18px;
   color: #555;
   line-height: 1.2em;
 }
-.action .menu2 h3 span {
+.action .menuProfile h3 span {
   font-size: 14px;
-  color: #cecece;
+  color: #555;
+  opacity: 0.8;
   font-weight: 400;
 }
-.action .menu2 ul li {
+.action .menuProfile ul {
+  padding: 5px;
+  margin: 0;
+}
+.action .menuProfile ul li {
   list-style: none;
-  padding: 10px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
 }
-.action .menu2 ul li img {
+
+.action .menuProfile ul li img {
   max-width: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   opacity: 0.5;
   transition: 0.5s;
 }
-.action .menu2 ul li:hover img {
+
+.action .menuProfile ul li:hover img {
   opacity: 1;
 }
-.action .menu2 ul li a {
+
+.action .menuProfile ul li a {
   display: inline-block;
   text-decoration: none;
   color: #555;
   font-weight: 500;
   transition: 0.5s;
 }
-.action .menu2 ul li:hover a {
-  color: blue;
+
+.action .menuProfile ul li:hover a {
+  color: lightblue;
 }

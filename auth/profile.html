@@ -10,7 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha383-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles/tentang.css">
+    <link rel="stylesheet" href="../styles/profile-auth.css">
+    <link
+      rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>LibBooks</title>
 </head>
 
@@ -18,11 +20,11 @@
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="index.html">LibBooks</a></span>
+            <span class="logo navLogo"><a href="index-auth.html">LibBooks</a></span>
 
             <div class="menu">
                 <div class="logo-toogle">
-                    <span class="logo"><a href="index.html">LibBooks</a></span>
+                    <span class="logo"><a href="index-auth.html">LibBooks</a></span>
                     <i class='bx bx-x sidebarClose'></i>
                 </div>
                 <ul class="nav-link mt-0 mb-0">
@@ -32,10 +34,10 @@
                         Kategori
                       </a>
                       <ul class="dropdown-menu dropdown-menu-white" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="index.html#book">Anime</a></li>
-                        <li><a class="dropdown-item" href="index.html#book2">Fantasi</a></li>
-                        <li><a class="dropdown-item" href="index.html#book3">Drama</a></li>
-                        <li><a class="dropdown-item" href="index.html#book4">Fiksi</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book">Anime</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book2">Fantasi</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book3">Drama</a></li>
+                        <li><a class="dropdown-item" href="index-auth.html#book4">Fiksi</a></li>
                       </ul>
                     </li>
                     <li><a href="buku.html">Buku</a></li>
@@ -45,46 +47,114 @@
             </div>
         
             <div class="searchBox">
-                <div class="searchToogle">
-                    <i class='bx bx-x cancel'></i>
-                    <i class='bx bx-search search'></i>
-                </div>
-                <div class="search-field">
-                    <input type="text" placeholder="Search...">
-                    <i class='bx bx-search search'></i>
-                </div>
+              <div class="searchToogle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+              </div>
+              <div class="search-field">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search search'></i>
             </div>
-            <a href="login.html" class="btn btn-primary mr-1" style="border-radius: 25px;width: 100px;">Login</a>
+            </div>
+            <div class="action">
+              <div class="userProfile" onclick="menuToggle();">
+                <img src="../img/profile.png">
+              </div>
+              <div class="menuProfile ps-3 pe-3">
+                <h3>Sopater Siringo ringo<br><span>Front End WebDev</span></h3>
+                <ul>
+                  <li><img src="../img/profile1.png" class="profile1"><a href="profileuser.html">Profile</a></li>
+                  <li><img src="../img/add-book.png" class="profile1"><a href="tambahBuku.html">Tambah Buku</a></li>
+                  <li><img src="../img/logout.png" class="profile1"><a href="../index.html">Logout</a></li>
+                </ul>
+              </div>
+            </div>
             </div>
         </div>
     </nav>
     <!-- index -->
-    <section id="about">
+    <div class="container-fluid" id="satu">
         <div class="container">
-          <div class="row text-center mb-3">
-            <div class="col">
-              <h2>Apa itu LibBooks?</h2>
+            <div class="row">
+                    <div class="usPengarang">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 p-0 text-center">
+                            <i class='bx bx-user-circle user'></i>
+                            <br>
+                            <a href="tambahBuku.html" class="btn btn-primary">Tambah Buku</a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ms-lg-5 ms-md-5 ms-sm-0 ms-lg-0 ms-md-0 ms-xl-0 ms-xxl-0 ms-0 mt-4 p-0">
+                            <h6>Nama Pengarang:</br></br>Genre:</br></br>Tangal Lahir:</br></br>Deskripsi:</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="row justify-content-center fs-5 text-center">
-            <div class="col-md-4">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni accusamus repellat enim quisquam harum dignissimos. Voluptates, earum! Voluptatum dolorem ipsam architecto consequatur nihil id repellat. Ratione excepturi
-                eveniet corporis magnam.
-              </p>
-            </div>
-            <div class="col-md-4">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, minus laudantium! Officiis hic corrupti, culpa error in ullam veniam blanditiis!</p>
-            </div>
+            <div class="container">
+              <div class="row" id="recbook">
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+                <div class="col-10 col-sm-6 ml-sm-0 mr-sm-0 mx-auto col-md-4 col-lg-2">
+                  <a href="" class="component-book d-block p-1">
+                    <div class="book-thumbnail">
+                      <div class="book-image">
+                        <img src="img/Rectangle 3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="book-text">lorem ipsum pakyu</div>
+                  </a>
+                </div>
+              </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-            fill="#97FFF3"
-            fill-opacity="0.5"
-            d="M0,32L48,64C96,96,192,160,288,181.3C384,203,480,181,576,176C672,171,768,181,864,202.7C960,224,1056,256,1152,250.7C1248,245,1344,203,1392,181.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-      </section>
+    </div>
     <!-- akhir index -->
 
     <!-- Footer -->
@@ -143,6 +213,7 @@
           opacity: 0.8;
           margin-top: 20px;
         }
+
         body footer li {
           margin-bottom: 16px;
         }
@@ -159,22 +230,22 @@
                 <div class="col-12 col-lg-6 col-md-12 col-sm-12 text-center">
                   <a href="#">
                     <img
-                      src="img/github.svg"
+                      src="../img/github.svg"
                       alt="github" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/fb.svg"
+                      src="../img/fb.svg"
                       alt="facebook" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/google.svg"
+                      src="../img/google.svg"
                       alt="google" class="img-fluid mr-4">
                   </a>
                   <a href="#">
                     <img
-                      src="img/ig.svg"
+                      src="../img/ig.svg"
                       alt="instagram" class="img-fluid mr-4">
                   </a>
                 </div>
@@ -223,6 +294,11 @@
                    nav.classList.remove("active");
                };
             });
+
+            function menuToggle() {
+        const toggleMenu = document.querySelector('.menuProfile');
+        toggleMenu.classList.toggle('active');
+      }
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
