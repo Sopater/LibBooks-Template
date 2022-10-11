@@ -211,6 +211,7 @@ nav .nav-bar .logo a {
   .nav-link li a {
     display: block;
     margin-top: 20px;
+    width: 100px;
   }
 }
 .container-fluid#satu {
